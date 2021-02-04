@@ -4,6 +4,7 @@ const GetStarted = () => import('../views/GetStarted.vue');
 const Login = () => import('../views/Login.vue');
 const SignUp = () => import('../views/SignUp.vue');
 const UnknownPage = () => import('../views/UnknownPage.vue');
+const Dictionary = () => import("../components/Dictionary.vue");
 
 
 const routes = [
@@ -16,6 +17,18 @@ const routes = [
     path: "/home",
     name: "Home",
     component: Home,
+    children: [
+      {
+        path: "",
+        name: "DefaultDictionary",
+        component: Dictionary,
+      },
+      {
+        path: "page=:pageId",
+        name: "Dictionary",
+        component: Dictionary,
+      },
+    ],
   },
   {
     path: "/login",

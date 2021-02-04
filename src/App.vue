@@ -18,5 +18,4 @@ export default {
 <style lang="sass">
 @import './sass/dist/base.css'
 
-
 </style>

@@ -42,14 +42,15 @@ export default {
       display: flex
       width: 100%
       height: 100%
-      justify-content: flex-end
       align-items: center
       color: $light-theme-color
     .logo-header
+      color: $light-theme-color
+      margin-right: auto
       margin-left: 50%
       transform: translate(-50%)
-      margin-right: auto
-      color: $light-theme-color
+      width: 400px
+     
     .link-header  
       margin-right: 40px
       color: $light-theme-color
@@ -71,4 +72,11 @@ export default {
       font-family: 'NotoSans', 'Roboto'
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
       text-decoration: none
+
+@media (max-width: 1501px)
+  .header
+    .nav-header
+      .logo
+        font-size: 56px
+        position: relative
 </style>

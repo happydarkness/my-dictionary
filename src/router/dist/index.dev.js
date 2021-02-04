@@ -43,6 +43,12 @@ var UnknownPage = function UnknownPage() {
   });
 };
 
+var Dictionary = function Dictionary() {
+  return Promise.resolve().then(function () {
+    return _interopRequireWildcard(require("../components/Dictionary.vue"));
+  });
+};
+
 var routes = [{
   path: "/",
   name: "GetStarted",
@@ -50,7 +56,16 @@ var routes = [{
 }, {
   path: "/home",
   name: "Home",
-  component: Home
+  component: Home,
+  children: [{
+    path: "",
+    name: "DefaultDictionary",
+    component: Dictionary
+  }, {
+    path: "page=:pageId",
+    name: "Dictionary",
+    component: Dictionary
+  }]
 }, {
   path: "/login",
   name: "Login",

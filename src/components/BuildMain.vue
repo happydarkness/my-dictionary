@@ -16,6 +16,7 @@
   display: flex
   align-items: flex-start
   background: $main-bg-color
+  
   .aside-block
     width: 340px
     margin-left: 15%
